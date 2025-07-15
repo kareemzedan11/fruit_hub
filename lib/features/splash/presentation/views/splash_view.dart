@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:fruithub/constant.dart';
 import 'package:fruithub/core/helper/routes_manger.dart';
+import 'package:fruithub/features/auth/presentation/views/login_view.dart';
 import 'package:fruithub/features/onboarding/presentation/views/onboarding_view.dart';
+import 'package:fruithub/features/onboarding/presentation/views/widgets/shared_prefrences_singleton.dart';
 import 'package:fruithub/features/splash/presentation/views/widgets/splash_view_body.dart';
 
 class SplashView extends StatefulWidget {
@@ -19,7 +22,11 @@ class _SplashViewState extends State<SplashView> {
     super.initState();
     Future.delayed(Duration(seconds: 3), () {
  
-      Navigator.pushReplacementNamed(context, OnboardingView.onboardingView);
+ if (SharedPrefsSingleton.getBool(kIsOnBoardingSeen) == true) {
+        Navigator.of(context).pushReplacementNamed(LoginView.loginView);
+      } else {
+        Navigator.of(context).pushReplacementNamed(OnboardingView.onboardingView);
+      }
     });
   }
   Widget build(BuildContext context) {
