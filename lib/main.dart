@@ -30,6 +30,7 @@ class Fruithub extends StatelessWidget {
             locale: Locale('ar'),
       debugShowCheckedModeBanner: false,
       title: 'Fruithub',
+      
       theme: ThemeData(
  
         fontFamily: 'Cairo',

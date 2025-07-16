@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:fruithub/core/helper/colors_manager.dart';
+import 'package:fruithub/core/utils/app_text_styles.dart';
 
-class CustomBottom extends StatelessWidget {
-  CustomBottom({super.key, required this.title, required this.ontap});
+class CustomBotton extends StatelessWidget {
+  CustomBotton({super.key, required this.title, required this.ontap});
   String title;
   VoidCallback ontap;
   @override
@@ -18,7 +19,7 @@ class CustomBottom extends StatelessWidget {
           ),
         ),
         onPressed: () => ontap,
-        child: Text(title, style: TextStyle(color: Colors.white)),
+        child: Text(title, style: TextStyles.bold16.copyWith(color: Colors.white)),
       ),
     );
   }

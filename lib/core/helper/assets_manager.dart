@@ -2,13 +2,29 @@
 class Assets {
   Assets._();
   
+  /// Assets for assetsImagesFruit basketAmico 1
+  /// assets/images/fruit basket-amico 1.svg
+  static const String assetsImagesFruit   = "assets/images/fruit basket-amico 1.svg";
+
+  /// Assets for assetsImagesIcApple
+  /// assets/images/ic_apple.svg
+  static const String assetsImagesIcApple = "assets/images/ic_apple.svg";
+
   /// Assets for assetsImagesIcCircle
   /// assets/images/ic_circle.svg
   static const String assetsImagesIcCircle = "assets/images/ic_circle.svg";
 
+  /// Assets for assetsImagesIcFacebook
+  /// assets/images/ic_facebook.svg
+  static const String assetsImagesIcFacebook = "assets/images/ic_facebook.svg";
+
   /// Assets for assetsImagesIcFruitBasket
   /// assets/images/ic_fruit_basket.svg
   static const String assetsImagesIcFruitBasket = "assets/images/ic_fruit_basket.svg";
+
+  /// Assets for assetsImagesIcGoogle
+  /// assets/images/ic_google.svg
+  static const String assetsImagesIcGoogle = "assets/images/ic_google.svg";
 
   /// Assets for assetsImagesIcPineapple
   /// assets/images/ic_pineapple.svg

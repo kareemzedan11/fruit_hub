@@ -2,8 +2,9 @@ import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:fruithub/constant.dart';
 import 'package:fruithub/core/helper/colors_manager.dart';
+import 'package:fruithub/core/widgets/custom_botton.dart';
 import 'package:fruithub/features/auth/presentation/views/login_view.dart';
-import 'package:fruithub/features/onboarding/presentation/views/widgets/custom_bottom.dart';
+ 
 import 'package:fruithub/features/onboarding/presentation/views/widgets/on_boarding_page_view.dart';
 import 'package:fruithub/features/onboarding/presentation/views/widgets/shared_prefrences_singleton.dart';
 
@@ -58,7 +59,7 @@ class _OnboardingViewBodyState extends State<OnboardingViewBody> {
             maintainAnimation: true,
             maintainState: true,
             visible: currentPage == 1,    
-            child: CustomBottom(title: "ابدأ الان", ontap: () {
+            child: CustomBotton(title: "ابدأ الان", ontap: () {
                                      SharedPrefsSingleton. setBool(kIsOnBoardingSeen, true) ; 
                 Navigator.of(context).pushReplacementNamed(LoginView.loginView);
             }),

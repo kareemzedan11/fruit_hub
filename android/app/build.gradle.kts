@@ -8,7 +8,7 @@ plugins {
 android {
     namespace = "com.example.fruithub"
     compileSdk = flutter.compileSdkVersion
-    ndkVersion = "29.0.13113456"
+
 
 
     compileOptions {
