@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fruithub/core/helper/assets_manager.dart';
-import 'package:fruithub/core/helper/colors_manager.dart';
+import 'package:fruithub/core/utils/assets_manager.dart';
+import 'package:fruithub/core/utils/colors_manager.dart';
 import 'package:fruithub/core/utils/app_text_styles.dart';
 import 'package:fruithub/features/onboarding/presentation/views/widgets/page-view-item.dart';
 

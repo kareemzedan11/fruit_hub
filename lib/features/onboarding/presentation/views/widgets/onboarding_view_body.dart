@@ -1,7 +1,7 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:fruithub/constant.dart';
-import 'package:fruithub/core/helper/colors_manager.dart';
+import 'package:fruithub/core/utils/colors_manager.dart';
 import 'package:fruithub/core/widgets/custom_botton.dart';
 import 'package:fruithub/features/auth/presentation/views/login_view.dart';
  

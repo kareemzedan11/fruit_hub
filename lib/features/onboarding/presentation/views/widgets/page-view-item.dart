@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fruithub/constant.dart';
-import 'package:fruithub/core/helper/routes_manger.dart';
+import 'package:fruithub/core/utils/routes_manger.dart';
 import 'package:fruithub/core/utils/app_text_styles.dart';
 import 'package:fruithub/features/auth/presentation/views/login_view.dart';
 import 'package:fruithub/features/onboarding/presentation/views/widgets/shared_prefrences_singleton.dart';

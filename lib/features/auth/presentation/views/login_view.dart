@@ -9,7 +9,10 @@ static const String loginView = '/loginView';
   @override
   Widget build(BuildContext context) {
     return   Scaffold(
-      appBar: builderAppBar( context, title: "تسجيل الدخول" , ontap:(){}),
+      appBar: builderAppBar( context, title: "تسجيل الدخول" , ontap:(){
+          Navigator.pop(context);
+
+      }),
       backgroundColor: Colors.white,
       body: LoginViewBody(),
     );

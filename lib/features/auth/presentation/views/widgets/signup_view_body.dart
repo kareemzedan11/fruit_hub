@@ -1,18 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:fruithub/core/utils/assets_manager.dart';
 import 'package:fruithub/core/utils/colors_manager.dart';
 import 'package:fruithub/core/utils/app_text_styles.dart';
 import 'package:fruithub/core/widgets/custom_botton.dart';
 import 'package:fruithub/core/widgets/custom_text_form_field.dart';
 import 'package:fruithub/core/widgets/text_action_prompt.dart';
-import 'package:fruithub/features/auth/presentation/views/forget_password_view.dart';
-import 'package:fruithub/features/auth/presentation/views/signup_view.dart';
-import 'package:fruithub/features/auth/presentation/views/widgets/or_divider.dart';
-import 'package:fruithub/features/auth/presentation/views/widgets/social_login_button.dart';
-import 'package:fruithub/features/auth/presentation/views/widgets/social_login_options.dart';
+import 'package:fruithub/features/auth/presentation/views/widgets/terms_and_conditions.dart';
 
-class LoginViewBody extends StatelessWidget {
-  const LoginViewBody({super.key});
+class SignupViewBody extends StatelessWidget {
+  const SignupViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,6 +17,12 @@ class LoginViewBody extends StatelessWidget {
         child: Column(
           children: [
             SizedBox(height: 24),
+            CustomTextFormField(
+              hintText: "الاسم كامل",
+              keyboardType: TextInputType.name,
+            ),
+            SizedBox(height: 16),
+
             CustomTextFormField(
               hintText: "البريد الالكتروني",
               keyboardType: TextInputType.emailAddress,
@@ -34,27 +35,15 @@ class LoginViewBody extends StatelessWidget {
               keyboardType: TextInputType.visiblePassword,
             ),
             SizedBox(height: 16),
-            GestureDetector(
-              onTap: () {
-                Navigator.pushNamed(context, ForgetPasswordView.forget_password);
-              },
-              child: Align(
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  "نسيت كلمة المرور؟",
-              
-                  style: TextStyles.semiBold13.copyWith(color: Color(0XFF2D9F5D)),
-                ),
-              ),
-            ),
-            SizedBox(height: 33),
-            CustomBotton(title: "تسجيل دخول", ontap: () {}),
-            SizedBox(height: 33),
+            TermsAndConditions(),
+            SizedBox(height: 42),
+            CustomBotton(title: "إنشاء حساب جديد", ontap: () {}),
+            SizedBox(height: 26),
             TextActionPrompt(
-              leadingText: "لا تمتلك حساب؟ ",
-              actionText: "قم بإنشاء حساب",
+              leadingText: "تمتلك حساب بالفعل؟  ",
+              actionText: "تسجيل دخول",
               onTap: () {
-          Navigator.pushNamed(context, SignupView.signup);
+                Navigator.pop(context);
               },
               leadingTextStyle: TextStyles.semiBold16.copyWith(
                 color: ColorsManager.hintTextColor,
@@ -65,16 +54,9 @@ class LoginViewBody extends StatelessWidget {
                 fontFamily: 'Cairo',
               ),
             ),
-
-            SizedBox(height: 37),
-
-            OrDivider(),
-            SizedBox(height: 16),
-            SocialLoginOptions(),
           ],
         ),
       ),
     );
   }
 }
- 

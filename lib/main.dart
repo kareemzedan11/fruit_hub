@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:fruithub/core/helper/routes_manger.dart';
+import 'package:fruithub/core/utils/routes_manger.dart';
 import 'package:fruithub/features/onboarding/presentation/views/widgets/shared_prefrences_singleton.dart';
 import 'package:fruithub/features/splash/presentation/views/splash_view.dart';
 import 'package:fruithub/generated/l10n.dart';
