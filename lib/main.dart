@@ -1,14 +1,20 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:fruithub/core/utils/routes_manger.dart';
 import 'package:fruithub/features/onboarding/presentation/views/widgets/shared_prefrences_singleton.dart';
 import 'package:fruithub/features/splash/presentation/views/splash_view.dart';
+import 'package:fruithub/firebase_options.dart';
 import 'package:fruithub/generated/l10n.dart';
 
 void main() async {
     WidgetsFlutterBinding.ensureInitialized();
 
         await SharedPrefsSingleton.getInstance();
+      
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const Fruithub());
   
 }
